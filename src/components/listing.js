@@ -97,6 +97,7 @@ const Listing = () => (
                     <p>{node.frontmatter.date} </p>
                     
                     <span class="dot"> <img src={gen} alt="gen" /></span>
+                    
                    
                     <p>{node.excerpt} </p>
                     <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>Read More</Link>
