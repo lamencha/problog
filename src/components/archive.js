@@ -27,15 +27,19 @@ const ArchiveList = styled.ul`
   
   background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.2);
-    padding: 1rem;
-    border-radius: 4px
-    text-decoration: none;
+  padding: 1rem;
+  border-radius: 4px
+  text-decoration: none;
+  color: #f4f4f4;
+
+
+
 
     div {
       background-color:  #70BFE0;
       box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.1);
       border: none;
-      color:#f4f4f4;
+      color: #f4f4f4;
       padding: 15px 32px;
       text-align: center;
       text-decoration: underline;
@@ -50,21 +54,19 @@ const ArchiveList = styled.ul`
     }
     
   a {
-    background-color: #70BFE0;
     border: none;
-    color: white;
     padding: 0px 0px;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     font-size: 1rem;
     text-decoration: none;
-    color: #70BFE0;
+    color: #f4f4f4;
     transition: font-size 1s;
   }
   a:visited {
     font-size: 1rem;
-    color: white;
+    color: #f4f4f4;
     text-decoration: none;
     transition: font-size 1s;
     

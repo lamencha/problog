@@ -2,10 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `AZ ZenHeads`,
     description: `Wuddup Zenheads? ITS YA BOI LUIS!`,
+    siteUrl: 'https://gallant-curran-ce94f5.netlify.com',
     author: `@MnstrPenguin`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -46,6 +48,7 @@ module.exports = {
         }
     },
     'gatsby-transformer-remark',
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-netlify`,
   ],
 }
