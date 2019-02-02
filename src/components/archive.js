@@ -64,7 +64,7 @@ const ArchiveList = styled.ul`
   }
   a:visited {
     font-size: 1rem;
-    color: #f4f4f4;
+    color: white;
     text-decoration: none;
     transition: font-size 1s;
     
