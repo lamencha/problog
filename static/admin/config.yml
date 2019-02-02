@@ -17,3 +17,4 @@ collections:
       - { label: 'Date', name: 'date', widget: 'date' }
       - { label: 'Title', name: 'title' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Image', name: 'image', widget: 'image' }
