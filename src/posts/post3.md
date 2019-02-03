@@ -1,6 +1,6 @@
 ---
 slug: /third-post
-date: '2019-01-31'
+date: 2019-01-31T07:00:00.000Z
 title: The Third
 image: /img/corn1.jpg
 ---
