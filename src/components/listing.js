@@ -74,8 +74,7 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     .dot {
         height: 150px;
         width: 150px;
-        background-color: #bbb;
-        border-radius: 50%;
+   
         display: inline-block;
         text-align: left;
 
