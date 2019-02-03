@@ -63,6 +63,7 @@ const ArchiveList = styled.ul`
     text-decoration: none;
     color: #f4f4f4;
     transition: font-size 1s;
+    transition: border-bottom 0.4s;
   }
   a:visited {
     font-size: 1rem;
@@ -75,6 +76,7 @@ const ArchiveList = styled.ul`
     color: #1B6DA3;
     font-size: 1rem;
     text-decoration: none;
+    border-bottom: 3px solid #f69064;
   }
 
 `
