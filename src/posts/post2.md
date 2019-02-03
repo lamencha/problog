@@ -1,6 +1,6 @@
 ---
 slug: /second-post
-date: '2019-01-30'
+date: 2019-01-30T07:00:00.000Z
 title: The Second
 image: /img/cream1.jpg
 ---
