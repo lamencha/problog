@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import gen from '../images/gen.jpg'
+
+
 
 const LISTING_QUERY = graphql `
     query BlogPostListing {
@@ -16,6 +17,7 @@ const LISTING_QUERY = graphql `
                     date(formatString: "MMMM DD, YYYY")
                     title
                     slug
+                    image
                 }
             }        
         }
@@ -96,9 +98,8 @@ const Listing = () => (
                     </Link>
                     <p>{node.frontmatter.date} </p>
                     
-                    <span class="dot"> <img src={gen} alt="gen" /></span>
-                    
-                   
+                    <span class="dot"> <img src={node.frontmatter.image} alt="article tumbnail" /></span>
+                                       
                     <p>{node.excerpt} </p>
                     <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>Read More</Link>
                     
