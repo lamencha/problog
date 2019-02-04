@@ -28,7 +28,7 @@ const NavList = styled.ul`
   padding: 0;
   margin: 15px;
   list-style: none;
-  
+  border-radius: 15px 50px;
   background-image: linear-gradient(141deg, #9fb8ad 51%, #1fc8db 0%);
   box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.2);
   padding: 1rem;

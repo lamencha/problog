@@ -26,6 +26,7 @@ const ArchiveList = styled.ul`
   list-style: none;
   
   background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  border-radius: 15px 50px;
   box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.2);
   padding: 1rem;
   border-radius: 4px
@@ -38,6 +39,7 @@ const ArchiveList = styled.ul`
     div {
       background-color:  #70BFE0;
       box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.1);
+      border-radius: 15px 50px;
       border: none;
       color: #f4f4f4;
       padding: 15px 32px;
