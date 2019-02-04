@@ -4,7 +4,7 @@ date: 2019-01-29T07:00:00.000Z
 title: The First
 image: /img/luismenchaca.png
 crop: 1
-rate: /img/default.webp
+rate: /img/star5.webp
 ---
 # Hello
 
