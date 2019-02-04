@@ -2,29 +2,27 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link, StaticQuery, graphql } from 'gatsby'
 
+import Layout from '../components/layout'
+
 
 
 const LISTING_QUERY = graphql `
-    query BlogPostListing {
-        allMarkdownRemark(limit: 10, sort: {
-        order: DESC,
-        fields: [frontmatter___date]
-        }) {
-        edges {
-            node{
-                excerpt
-                frontmatter {
-                    date(formatString: "MMMM DD, YYYY")
-                    title
-                    slug
-                    image
-                    crop
-                    rate
-                }
-            }        
-        }
-        }
+query CropPostListing {
+    allMarkdownRemark(filter: { frontmatter: { crop: {eq: 1 } } } ) {
+    edges {
+        node{
+            excerpt
+            frontmatter {
+                date(formatString: "MMMM DD, YYYY")
+                title
+                slug
+                image
+                  crop
+            }
+        }        
     }
+    }
+}
 `
 
 const Post = styled.article`
@@ -41,18 +39,12 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     a {
         color: #f4f4f4;
         text-decoration: none;
-        
     }
-    a:hover  {
-        text-shadow: 2px 2px 4px #7f7f7f;
-
-    }
-    h1 {
+    h2 {
         margin-bottom: 0;
     }
     p {
         font-size: 1rem;
-        margin-bottom: 0;
     }
 
     
@@ -82,17 +74,8 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     .dot {
         height: 150px;
         width: 150px;
+   
         display: inline-block;
-        
-
-        
-      }
-
-      .rate {
-        height: 10%;
-        width: 10%;
-        
-        display: block;
         text-align: left;
 
         
@@ -101,24 +84,22 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 
 
 `
+const Crop = ({location}) => (
+    <Layout location={location} >
 
-const Listing = () => (
     <StaticQuery
         query={LISTING_QUERY}
         render={({allMarkdownRemark}) => (
             allMarkdownRemark.edges.map(({node}) => (
                 
                 <Post key={node.frontmatter.slug}>
-                
                     <Link to={`/posts${node.frontmatter.slug}`}>
-                        <h1>{node.frontmatter.title}</h1>
-                        
+                        <h2>{node.frontmatter.title}</h2>
                     </Link>
                     <p>{node.frontmatter.date} </p>
-                    <img class="rate" src={node.frontmatter.rate} alt="Rating" />
-                                                            
-                    <img class="dot" src={node.frontmatter.image} alt="article tumbnail" />
-                                                           
+                    
+                    <span class="dot"> <img src={node.frontmatter.image} alt="article tumbnail" /></span>
+                                       
                     <p>{node.excerpt} </p>
                     <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>Read More</Link>
                     
@@ -130,7 +111,9 @@ const Listing = () => (
         )}
         
     />
+
+</Layout>
     
 )
 
-export default Listing
+export default Crop

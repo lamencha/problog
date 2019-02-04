@@ -8,6 +8,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import Archive from './archive'
+import Nav from './nav'
 import './layout.css'
 
 const MainLayout = styled.main`
@@ -21,6 +22,8 @@ const MainLayout = styled.main`
     max-width: 20%;
     max-height: 20%;
   }
+
+  
  
 `
 
@@ -62,9 +65,12 @@ const Layout = ({ children, location }) => (
         <Img fluid={data.file.childImageSharp.fluid} />
           )}*/}
         <MainLayout>
+          
           <div>
+          <Nav />
           {children}
           </div>
+          
           <Archive />
           <footer>
           
