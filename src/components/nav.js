@@ -110,6 +110,18 @@ const NavList = styled.ul`
     text-decoration: none;
   }
 
+  @media (max-width: 360px) {
+    .container {
+      position: relative;
+      left: 5%;
+      
+      max-Width: 120px;
+      display: inline-block;
+      padding: 10px;
+    }
+    
+  }
+
   @media (max-width: 700px) {
     .container {
       position: relative;

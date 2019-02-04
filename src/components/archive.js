@@ -76,18 +76,19 @@ const ArchiveList = styled.ul`
   }
   a:hover {
     color: #1B6DA3;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-decoration: none;
     border-bottom: 3px solid #f69064;
   }
 
   @media (max-width: 700px) {
     a{
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
 
     div{
       width: 100%;
+      padding: 15px 32px;
     }
     
   }
