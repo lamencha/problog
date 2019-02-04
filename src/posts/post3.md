@@ -4,7 +4,7 @@ date: 2019-01-31T07:00:00.000Z
 title: The Third
 image: /img/corn1.jpg
 crop: 0
-rate: /img/default.webp
+rate: /img/star3.webp
 ---
 # Hello
 
