@@ -4,7 +4,7 @@ date: 2019-01-30T07:00:00.000Z
 title: The Second
 image: /img/cream1.jpg
 crop: 0
-rate: /img/default.webp
+rate: /img/star4.webp
 ---
 # Hello
 
