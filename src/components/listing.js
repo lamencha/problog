@@ -12,7 +12,7 @@ const LISTING_QUERY = graphql `
         }) {
         edges {
             node{
-                excerpt
+                excerpt(pruneLength: 280)
                 frontmatter {
                     date(formatString: "MMMM DD, YYYY")
                     title
@@ -51,8 +51,9 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
         margin-bottom: 0;
     }
     p {
-        font-size: 1rem;
+        font-size: 1.4rem;
         margin-bottom: 0;
+        display: block;
     }
 
     
@@ -73,6 +74,7 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
         color: #f4f4f4;
         transition: font-size 1s;
         transition: padding 1s;
+        margin-top: 15px;
     }
     .read-more:hover {
         color: #f4f4f4;

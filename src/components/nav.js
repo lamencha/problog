@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import team from '../images/team3.webp'
 import cream from '../images/cream2.webp'
+import avatar from '../images/avatar.png'
 
 const Nav_ARCHIVE_QUERY = graphql`
   query NavBar {
@@ -38,7 +39,7 @@ const NavList = styled.ul`
 
   .container {
     position: relative;
-    left: 40%;
+    left: 30%;
     
     max-Width: 200px;
     display: inline-block;
@@ -135,6 +136,28 @@ const Nav = () => (
             <div  class="middle">
               <Link  style={{textDecoration: `none`,}} to={`/about`}>
                 <h2 class="text">About Us</h2>
+              </Link>
+            </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="image1">
+          <img class="image" src={avatar} alt="Avatar" ></img>
+            <div  class="middle">
+              <Link style={{textDecoration: `none`,}} to= {`/luis`}>
+                <h2 class="text">Luis Menchaca</h2>
+              </Link>
+            </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image1">
+          <img class="image" src={avatar} alt="Avatar" ></img>
+            <div  class="middle">
+              <Link  style={{textDecoration: `none`,}} to={`/bryan`}>
+                <h2 class="text">Bryan Denetclaw</h2>
               </Link>
             </div>
         </div>

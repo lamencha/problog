@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components';
 import zen from '../images/zen.png'
-import avatar from '../images/avatar.png'
 
 const HeaderWrapper = styled.div`
   background-image: linear-gradient(141deg, #556270 0%, #1fc8db 51%, #4ecdc4 75%);
@@ -116,27 +115,7 @@ const Header = ({ siteTitle }) => (
             src={zen} alt="zen" />
         </Link>
       
-      <div class="container">
-        <div class="image1">
-          <img class="image" src={avatar} alt="Avatar" ></img>
-            <div  class="middle">
-              <Link style={{textDecoration: `none`,}} to= {`/luis`}>
-                <h2 class="text">Luis Menchaca</h2>
-              </Link>
-            </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="image1">
-          <img class="image" src={avatar} alt="Avatar" ></img>
-            <div  class="middle">
-              <Link  style={{textDecoration: `none`,}} to={`/bryan`}>
-                <h2 class="text">Bryan Denetclaw</h2>
-              </Link>
-            </div>
-        </div>
-      </div>
+      
       </h1>
     </HeaderContainer>
   </HeaderWrapper>
