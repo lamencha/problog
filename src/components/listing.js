@@ -86,8 +86,8 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
       }
 
       .rate {
-        height: 10%;
-        width: 10%;
+        width: 120px;
+        height : 25px;
         display: block;
         text-align: left;
  
@@ -109,6 +109,19 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
       }
       h1 {
           margin-top: 0px;
+      }
+
+      @media (max-width: 700px) {
+        text-align: center;
+
+        .rate {
+            position:relative;
+            width: 120px;
+            height : 25px;
+            left: 28%;
+     
+          }
+
       }
 
 

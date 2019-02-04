@@ -61,7 +61,7 @@ const ArchiveList = styled.ul`
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: #f4f4f4;
     transition: font-size 1s;
@@ -79,6 +79,17 @@ const ArchiveList = styled.ul`
     font-size: 1rem;
     text-decoration: none;
     border-bottom: 3px solid #f69064;
+  }
+
+  @media (max-width: 700px) {
+    a{
+      font-size: 1.5rem;
+    }
+
+    div{
+      width: 100%;
+    }
+    
   }
 
 `

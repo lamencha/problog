@@ -110,7 +110,30 @@ const NavList = styled.ul`
     text-decoration: none;
   }
 
-`
+  @media (max-width: 700px) {
+    .container {
+      position: relative;
+      left: 10%;
+      
+      max-Width: 150px;
+      display: inline-block;
+      padding: 10px;
+    }
+    
+  }
+  
+
+  @media (max-width: 1872px) {
+    .container {
+      position: relative;
+      left: 10%;
+      max-Width: 150px;
+      display: inline-block;
+      padding: 10px;
+    }
+ 
+
+`;
 
 const Nav = () => (
   <StaticQuery

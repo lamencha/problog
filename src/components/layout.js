@@ -23,7 +23,11 @@ const MainLayout = styled.main`
     max-height: 20%;
   }
 
-  
+  @media (max-width: 700px) {
+    max-width: 100%;
+    grid-gap: 0px;
+    grid-template-columns: 1fr ;
+  }
  
 `
 
