@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import team from '../images/team3.webp'
-import cream from '../images/cream2.webp'
+import team from '../images/team3p.png'
+import cream from '../images/cream2p.png'
 import avatar from '../images/avatar.png'
 
 const Nav_ARCHIVE_QUERY = graphql`

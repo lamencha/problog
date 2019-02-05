@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components';
-import zen2 from '../images/zen2.webp'
+import zen2 from '../images/zen3.png'
 
 const HeaderWrapper = styled.div`
   background-image: linear-gradient(141deg, #556270 0%, #1fc8db 51%, #4ecdc4 75%);
