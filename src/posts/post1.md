@@ -2,7 +2,7 @@
 slug: /first-post
 date: 2019-01-29T07:00:00.000Z
 title: The First
-image: /img/luismenchaca.png
+image: /img/luipen1.webp
 crop: 1
 rate: /img/star5.webp
 ---
