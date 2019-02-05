@@ -42,7 +42,7 @@ const Layout = ({ children, location }) => (
           }
         }  
         file(relativePath: {
-          regex: "/bg2/"
+          regex: "/bg2p/"
         }) {
           childImageSharp {
             fluid(maxWidth: 4032) {
