@@ -110,37 +110,6 @@ const NavList = styled.ul`
     text-decoration: none;
   }
 
-  @media (max-width: 360px) {
-    .container {
-      position: relative;
-      left: 1%;
-      
-      max-Width: 100px;
-      display: inline-block;
-      padding: 5px;
-    }
-    .image{
-      width: 90%;
-    }
-    .middle{
-      width: 90%;
-    }
-    
-  }
-
-  @media (max-width: 700px) {
-    .container {
-      position: relative;
-      left: 10%;
-      
-      max-Width: 150px;
-      display: inline-block;
-      padding: 10px;
-    }
-    
-  }
-  
-
   @media (max-width: 1872px) {
     .container {
       position: relative;
@@ -149,6 +118,49 @@ const NavList = styled.ul`
       display: inline-block;
       padding: 10px;
     }
+
+  
+
+  @media (max-width: 700px) {
+    .container {
+      position: relative;
+      padding: 10px;
+      max-Width: 150px;
+      display: inline-block;
+      
+    }
+
+  }
+  
+
+  @media (max-width: 400px) {
+    .container {
+      position: inherit;
+      padding: 0px;
+      max-Width: 100%;
+      display: block;
+      
+    }
+
+    .image{
+      display: none;
+    }
+
+    .middle {
+      transition: .5s ease;
+      opacity: 0.7;
+      position: inherit;
+      width: 100%;
+      padding: 0px;
+      top: 100%;
+      left: 100%;
+      transform: translate(0%, 0%);
+      -ms-transform: translate(0%, 0%);
+      text-align: center;
+    }
+
+    
+  }
  
 
 `;

@@ -32,7 +32,7 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     box-shadow: 0px 2px 10px rgba(25, 17, 34, 0.4);
     
     border-radius: 4px;
-     
+    margin: 15px; 
     color: #f4f4f4;
          
     a {
