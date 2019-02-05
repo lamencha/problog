@@ -2,11 +2,14 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components';
-import zen from '../images/zen.png'
+import zen2 from '../images/zen2.webp'
 
 const HeaderWrapper = styled.div`
   background-image: linear-gradient(141deg, #556270 0%, #1fc8db 51%, #4ecdc4 75%);
     .pic {
+      
+      max-Width: 408.8px;
+      max-Height: 272.53px;
     margin-bottom: 0;
     -webkit-filter: grayscale(100%);filter: grayscale(100%);
     transition: -webkit-filter 1s;
@@ -85,6 +88,14 @@ const HeaderWrapper = styled.div`
     padding: 16px 32px;
     text-decoration: none;
   }
+
+  @media (max-width: 700px) {
+    .pic {
+      max-Width: 308.8px;
+      max-Height: 252.53px;
+  }
+}
+
 `;
 
 const HeaderContainer = styled.div`
@@ -104,15 +115,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          <img class="pic" style={{
-            
-            minWidth: '10%',
-            maxWidth: '408.8px',
-            minHeight: '10%',
-            maxHeight:'272.53px',
-                      
-          }}
-            src={zen} alt="zen" />
+          <img class="pic" src={zen2} alt="zen" />
         </Link>
       
       
