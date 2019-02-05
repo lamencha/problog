@@ -133,7 +133,7 @@ const NavList = styled.ul`
   }
   
 
-  @media (max-width: 400px) {
+  @media (max-width: 420px) {
     .container {
       position: inherit;
       padding: 0px;
