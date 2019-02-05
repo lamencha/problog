@@ -95,6 +95,12 @@ const HeaderWrapper = styled.div`
       max-Height: 252.53px;
   }
 }
+@media (max-width: 360px) {
+  .pic {
+    max-Width: 150px;
+    max-Height: 100px;
+}
+}
 
 `;
 

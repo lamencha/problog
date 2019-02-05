@@ -113,11 +113,11 @@ const NavList = styled.ul`
   @media (max-width: 360px) {
     .container {
       position: relative;
-      left: 5%;
+      left: 1%;
       
-      max-Width: 120px;
+      max-Width: 100px;
       display: inline-block;
-      padding: 10px;
+      padding: 5px;
     }
     
   }
