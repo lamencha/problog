@@ -25,6 +25,7 @@ const MainLayout = styled.main`
 
   @media (max-width: 700px) {
     max-width: 100%;
+    margin: 0rem auto;
     grid-template-columns: 1fr ;
   }
  

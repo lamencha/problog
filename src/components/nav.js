@@ -119,6 +119,12 @@ const NavList = styled.ul`
       display: inline-block;
       padding: 5px;
     }
+    .image{
+      width: 90%;
+    }
+    .middle{
+      width: 90%;
+    }
     
   }
 
