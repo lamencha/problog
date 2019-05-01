@@ -10,6 +10,8 @@ import Header from './header'
 import Archive from './archive'
 import Nav from './nav'
 import './layout.css'
+import Toggle from './toggle'
+
 
 const MainLayout = styled.main`
   max-width: 90%;
@@ -21,12 +23,63 @@ const MainLayout = styled.main`
   image {
     max-width: 20%;
     max-height: 20%;
+    z-index: 1;
   }
+
+  button {
+    display: none;
+
+  }
+
+
+  .ham {
+    
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    width: 100%;
+  }
+
 
   @media (max-width: 700px) {
     max-width: 100%;
     margin: 0rem auto;
     grid-template-columns: 1fr ;
+  }
+
+  @media (max-width: 420px) {
+    button {
+      font-family: "Arial Black", Gadget, sans-serif;
+      display: block;
+      background-color: #70BFE0 ;
+      background-image:
+      radial-gradient(#96d0e8 20%, transparent 0), 
+      radial-gradient(#96d0e8 15%, transparent 0);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+      box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.4);
+      border: 5px;
+      border-style: dashed;
+      width: 100%;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: 3px 2px #ffb366;
+      
+      display: block;
+           
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+      color: black;
+      transition: font-size 3.2s;
+      transition: padding 1s;
+      transform: skewY(-1.0deg);
+    }
+
+ .big {
+  display: none;  
+ }
   }
  
 `
@@ -55,26 +108,37 @@ const Layout = ({ children, location }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <br></br>
         <Spring
-          from={{ height: location.pathname === '/' ? 100 : 200 }}
-          to={{ height: location.pathname === '/' ? 200 : 100 }}
+          from={{ height: location.pathname === '/' ? 200 : 300 }}
+          to={{ height: location.pathname === '/' ? 300 : 200 }}
           >
           {styles => (
-            <div style={{overflow: 'hidden', ...styles}}>
-            <Img fluid={data.file.childImageSharp.fluid} />
+            <div style={{display: 'none', ...styles}}>
+           
+            <Img fluid={data.file.childImageSharp.fluid} >
+            </Img>
+            
             </div>
           )}
+          
           </Spring>
         { /*location.pathname === '/' && (
         <Img fluid={data.file.childImageSharp.fluid} />
           )}*/}
+         
         <MainLayout>
           
+          
           <div>
+          <div class="big">
+           <Nav  />
+          </div>
+          <Toggle>
           <Nav />
+          </Toggle>
           {children}
           </div>
-          
           <Archive />
           <footer>
           

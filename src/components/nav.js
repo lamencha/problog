@@ -1,9 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import team from '../images/team3p.png'
-import cream from '../images/cream2p.png'
-import avatar from '../images/avatar.png'
+
+
 
 const Nav_ARCHIVE_QUERY = graphql`
   query NavBar {
@@ -29,7 +28,7 @@ const NavList = styled.ul`
   margin: 15px;
   list-style: none;
   border-radius: 15px 50px;
-  background-image: linear-gradient(141deg, #9fb8ad 51%, #1fc8db 0%);
+  background-image: linear-gradient(141deg, #9fb8ad 51%, #1fc8db 20%);
   box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.2);
   padding: 1rem;
   border-radius: 4px
@@ -39,9 +38,9 @@ const NavList = styled.ul`
 
   .container {
     position: relative;
-    left: 30%;
+    left: 0%;
     
-    max-Width: 200px;
+    
     display: inline-block;
     padding: 10px;
   }
@@ -57,16 +56,30 @@ const NavList = styled.ul`
   }
   
   .middle {
-    transition: .5s ease;
-    opacity: 0.7;
-    position: absolute;
-    width: 100%;
-    padding: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    
+    background-color: #70BFE0 ;
+    background-image:
+    radial-gradient(#96d0e8 20%, transparent 0), 
+    radial-gradient(#96d0e8 15%, transparent 0);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.1);
+    border: 5px;
+    border-style: dashed;
+    
+    padding: 15px 32px;
     text-align: center;
+    text-decoration: none;
+    text-shadow: 3px 2px #ffb366;
+    display: block;
+         
+    cursor: pointer;
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+    transition: font-size 3.2s;
+    transition: padding 1s;
+    transform: skewY(-1.0deg);
   }
   
   .container:hover .image {
@@ -80,7 +93,7 @@ const NavList = styled.ul`
   .text {
     background-color: white;
     color: black;
-    font-size: 16px;
+    font-size: 0.8em;
     padding: 16px 32px;
     text-decoration: none;
   }
@@ -89,7 +102,7 @@ const NavList = styled.ul`
   h2{
     background-color: #000000;
     color: white;
-    font-size: 16px;
+    font-size: 0.8em;
     padding: 16px 32px;
     text-decoration: none;
     transition: background-color 1s;
@@ -97,15 +110,15 @@ const NavList = styled.ul`
   h2:visited {
     background-color: #000000;
     color: white;
-    font-size: 16px;
+    font-size: 0.8em;
     padding: 16px 32px;
     text-decoration: none;
   }
 
   h2:hover {
-    background-color: #000000;
+    background-color: grey;
     color: white;
-    font-size: 16px;
+    font-size: 0.8em;
     padding: 16px 32px;
     text-decoration: none;
   }
@@ -159,6 +172,8 @@ const NavList = styled.ul`
       text-align: center;
     }
 
+
+
     
   }
  
@@ -172,9 +187,15 @@ const Nav = () => (
       <>
        <aside>
        <NavList>
+
+      
+        
+      
+<div>
+         
        <div class="container">
         <div class="image1">
-          <img class="image" src={cream} alt="Avatar" ></img>
+      
             <div  class="middle">
               <Link style={{textDecoration: `none`,}} to= {`/crop`}>
                 <h2 class="text">Cream Of The Crop</h2>
@@ -185,7 +206,7 @@ const Nav = () => (
 
       <div class="container">
         <div class="image1">
-          <img class="image" src={team} alt="Avatar" ></img>
+         
             <div  class="middle">
               <Link  style={{textDecoration: `none`,}} to={`/about`}>
                 <h2 class="text">About Us</h2>
@@ -196,7 +217,7 @@ const Nav = () => (
       
       <div class="container">
         <div class="image1">
-          <img class="image" src={avatar} alt="Avatar" ></img>
+         
             <div  class="middle">
               <Link style={{textDecoration: `none`,}} to= {`/luis`}>
                 <h2 class="text">Luis Menchaca</h2>
@@ -207,7 +228,7 @@ const Nav = () => (
 
       <div class="container">
         <div class="image1">
-          <img class="image" src={avatar} alt="Avatar" ></img>
+        
             <div  class="middle">
               <Link  style={{textDecoration: `none`,}} to={`/bryan`}>
                 <h2 class="text">Bryan Denetclaw</h2>
@@ -215,6 +236,8 @@ const Nav = () => (
             </div>
         </div>
       </div>
+      </div>
+      
            </NavList>
        </aside>
 

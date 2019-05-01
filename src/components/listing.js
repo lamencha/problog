@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link, StaticQuery, graphql } from 'gatsby'
-
+import cal from '../images/cal.png'
 
 
 const LISTING_QUERY = graphql `
@@ -29,11 +29,14 @@ const LISTING_QUERY = graphql `
 
 const Post = styled.article`
 background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+
     box-shadow: 0px 2px 10px rgba(25, 17, 34, 0.4);
-    
+    font-family: "Arial Black", Gadget, sans-serif;
     border-radius: 4px;
     margin: 15px; 
     color: #f4f4f4;
+    padding: 20px;
+
          
     a {
         color: #f4f4f4;
@@ -56,20 +59,28 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 
     .read-more {
         background-color: #70BFE0 ;
+        background-image:
+        radial-gradient(#96d0e8 20%, transparent 0), 
+        radial-gradient(#96d0e8 15%, transparent 0);
+        background-size: 30px 30px;
+        background-position: 0 0, 15px 15px;
         box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.1);
-        border: none;
+        border: 5px;
+        border-style: dashed;
         
         padding: 15px 32px;
         text-align: center;
         text-decoration: none;
+        text-shadow: 3px 2px #ffb366;
         display: block;
              
         cursor: pointer;
         font-size: 1rem;
         text-decoration: none;
-        color: #f4f4f4;
-        transition: font-size 1.2s;
+        color: black;
+        transition: font-size 3.2s;
         transition: padding 1s;
+        transform: skewY(-1.0deg);
        
     }
     .read-more:hover {
@@ -111,6 +122,11 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
           margin-top: 0px;
       }
 
+      .cal{
+          width: 30px;
+          length: 30px;
+      }
+
       @media (max-width: 700px) {
         text-align: center;
 
@@ -140,7 +156,7 @@ const Listing = () => (
                         <h1>{node.frontmatter.title}</h1>
                         
                     </Link>
-                    <p>{node.frontmatter.date} </p>
+                    <p> <img class="cal" src={cal} alt="calendar" /> {node.frontmatter.date} </p>
                     <img class="rate" src={node.frontmatter.rate} alt="Rating" />
                                                             
                     

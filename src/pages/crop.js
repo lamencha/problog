@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link, StaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-
+import cal from '../images/cal.png'
 
 
 const LISTING_QUERY = graphql `
@@ -17,7 +17,8 @@ query CropPostListing {
                 title
                 slug
                 image
-                  crop
+                crop
+                rate
             }
         }        
     }
@@ -27,60 +28,116 @@ query CropPostListing {
 
 const Post = styled.article`
 background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-    box-shadow: 0px 2px 10px rgba(25, 17, 34, 0.4);
-    padding: 1.5rem;
-    border-radius: 4px;
-    margin: 15px;
-    color: #f4f4f4;
-    justify-content: space-evenly;
-     
 
-    
+    box-shadow: 0px 2px 10px rgba(25, 17, 34, 0.4);
+    font-family: "Arial Black", Gadget, sans-serif;
+    border-radius: 4px;
+    margin: 15px; 
+    color: #f4f4f4;
+    padding: 20px;
+
+         
     a {
         color: #f4f4f4;
         text-decoration: none;
+        text-shadow: 2px 2px 4px #7f7f7f;
+        margin-top: 0px;
+        
     }
-    h2 {
-        margin-bottom: 0;
-    }
-    p {
-        font-size: 1rem;
+    a:hover  {
+        text-shadow: 2px 2px 4px #7f7f7f;
+        margin-top: 0px;
+        color: #c1edff;
+
     }
 
-    
+    p {
+        font-size: 1.4rem;
+        display: block;
+    }
+
     .read-more {
         background-color: #70BFE0 ;
+        background-image:
+        radial-gradient(#96d0e8 20%, transparent 0), 
+        radial-gradient(#96d0e8 15%, transparent 0);
+        background-size: 30px 30px;
+        background-position: 0 0, 15px 15px;
         box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.1);
-        border: none;
+        border: 5px;
+        border-style: dashed;
         
         padding: 15px 32px;
         text-align: center;
         text-decoration: none;
-        display: inline-block;
-        
-        margin: 4px 2px;
+        text-shadow: 3px 2px #ffb366;
+        display: block;
+             
         cursor: pointer;
-        font-size: 0.8rem;
+        font-size: 1rem;
         text-decoration: none;
-        color: #f4f4f4;
-        transition: font-size 1s;
+        color: black;
+        transition: font-size 3.2s;
         transition: padding 1s;
+        transform: skewY(-1.0deg);
+       
     }
     .read-more:hover {
+        background-color: #5ea4c1 ;
         color: #f4f4f4;
-        font-size: 0.8rem;
-        padding: 15px 50px;
+        font-size: 1rem;
+        
     }
     .dot {
-        height: 150px;
-        width: 150px;
-   
+        height: 250px;
+        width: 250px;
         display: inline-block;
-        text-align: left;
-
         
       }
 
+      .rate {
+        width: 120px;
+        height : 25px;
+        display: block;
+        text-align: left;
+ 
+      }
+
+      .side {
+        display: inline-block;
+        width: 70%;
+        height : 100%;
+        margin-top: 5px;
+        
+        
+
+    }
+      .side1 {
+        display: inline-block;
+        padding: 1.5rem;
+             
+      }
+      h1 {
+          margin-top: 0px;
+      }
+
+      .cal{
+          width: 30px;
+          length: 30px;
+      }
+
+      @media (max-width: 700px) {
+        text-align: center;
+
+        .rate {
+            position:relative;
+            width: 120px;
+            height : 25px;
+            left: 28%;
+     
+          }
+
+      }
 
 
 `
@@ -93,17 +150,22 @@ const Crop = ({location}) => (
             allMarkdownRemark.edges.map(({node}) => (
                 
                 <Post key={node.frontmatter.slug}>
+                <div class="side1"><img class="dot" src={node.frontmatter.image} alt="article tumbnail" /></div>
+                <div class="side">
                     <Link to={`/posts${node.frontmatter.slug}`}>
-                        <h2>{node.frontmatter.title}</h2>
+                        <h1>{node.frontmatter.title}</h1>
+                        
                     </Link>
-                    <p>{node.frontmatter.date} </p>
+                    <p> <img class="cal" src={cal} alt="calendar" /> {node.frontmatter.date} </p>
+                    <img class="rate" src={node.frontmatter.rate} alt="Rating" />
+                                                            
                     
-                    <span class="dot"> <img src={node.frontmatter.image} alt="article tumbnail" /></span>
-                                       
+                                                           
                     <p>{node.excerpt} </p>
+                    
+                    <br></br>
+                    </div> 
                     <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>Read More</Link>
-                    
-                    
                 </Post>
                 
             ))

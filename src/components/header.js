@@ -6,6 +6,8 @@ import zen2 from '../images/zen3.png'
 
 const HeaderWrapper = styled.div`
   background-image: linear-gradient(141deg, #556270 0%, #1fc8db 51%, #4ecdc4 75%);
+ 
+ 
     .pic {
       
       max-Width: 408.8px;
@@ -104,9 +106,10 @@ const HeaderWrapper = styled.div`
 
 `;
 
+
 const HeaderContainer = styled.div`
   margin: 0 auto;
-  maxWidth: 960;
+  maxWidth: 960px;
   padding: 1rem;
 `;
 
@@ -126,6 +129,7 @@ const Header = ({ siteTitle }) => (
       
       
       </h1>
+      
     </HeaderContainer>
   </HeaderWrapper>
 )
