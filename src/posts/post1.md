@@ -6,9 +6,9 @@ image: /img/luipen1p.png
 crop: 1
 rate: /img/star5p.png
 ---
-# Hello
+# Whats up
 
-## From The Other Side
+## here is a ting
 
 Lorem ipsum dolor amet subway tile pinterest pickled knausgaard. Readymade blog scenester shaman meditation taxidermy. Chambray selvage yuccie, cold-pressed aesthetic four loko retro. Lyft succulents tofu salvia art party authentic. Synth af authentic chicharrones dreamcatcher. Snackwave helvetica cliche YOLO pok pok.
 

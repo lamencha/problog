@@ -5,8 +5,8 @@ import styled from 'styled-components';
 import zen2 from '../images/zen3.png'
 
 const HeaderWrapper = styled.div`
-  background-image: linear-gradient(141deg, #556270 0%, #1fc8db 51%, #4ecdc4 75%);
- 
+  background-image: linear-gradient(141deg, #556270 86%, #1fc8db 0%, #4ecdc4 0%);
+  
  
     .pic {
       
@@ -90,11 +90,35 @@ const HeaderWrapper = styled.div`
     padding: 16px 32px;
     text-decoration: none;
   }
+  .left {
+    background-image: linear-gradient(141deg, #556270 50%, #1fc8db 20%, #4ecdc4 40%);
+    transform: skewY(-1.8deg);
+    height: 50px;
+    width: 100%;
+    z-index: auto;
+    box-shadow: 0px 20px #ffb366;
+  }
+
+  .right {
+    background-image: linear-gradient(141deg, #556270 50%, #1fc8db 20%, #4ecdc4 40%);
+    transform: skewY(2.2deg);
+    height: 50px;
+    width: 100%;
+    z-index: auto;
+ 
+  }
 
   @media (max-width: 700px) {
     .pic {
-      max-Width: 308.8px;
-      max-Height: 252.53px;
+      max-Width: 154.4px;
+      max-Height: 126.26px;
+  }
+  .left {
+    height: 15px;
+    box-shadow: 0px 10px #ffb366;
+  }
+  .right {
+    height: 15px;
   }
 }
 @media (max-width: 360px) {
@@ -110,28 +134,30 @@ const HeaderWrapper = styled.div`
 const HeaderContainer = styled.div`
   margin: 0 auto;
   maxWidth: 960px;
-  padding: 1rem;
+  
 `;
 
 const Header = ({ siteTitle }) => (
+  
+  
   <HeaderWrapper>
+
+     
     <HeaderContainer>
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+    <h1 style={{ margin: 10 }}>
+        <Link to="/">
           <img class="pic" src={zen2} alt="zen" />
         </Link>
-      
-      
       </h1>
-      
+    <div class="left" > 
+    <div class="right" >
+    </div>
+    </div>
     </HeaderContainer>
+    
   </HeaderWrapper>
+  
+ 
 )
 
 Header.propTypes = {

@@ -22,9 +22,9 @@ export default class Toggle extends Component {
 
         <button class="bud" onClick={this.toggle}>
         
-            <div class="ham"></div>
+            
             <div class="Dam">MENU</div>
-            <div class="ham"></div>
+            
            
         </button>
         {this.state.on && this.props.children}

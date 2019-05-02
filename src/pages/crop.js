@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link, StaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import cal from '../images/cal.png'
+import cal from '../images/cal2.png'
 
 
 const LISTING_QUERY = graphql `
@@ -47,13 +47,14 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     a:hover  {
         text-shadow: 2px 2px 4px #7f7f7f;
         margin-top: 0px;
-        color: #c1edff;
+        color: black;
 
     }
 
     p {
         font-size: 1.4rem;
         display: block;
+        text-shadow: 2px 2px 4px #7f7f7f;
     }
 
     .read-more {
@@ -91,7 +92,7 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     .dot {
         height: 250px;
         width: 250px;
-        display: inline-block;
+        display: flex;
         
       }
 
@@ -128,13 +129,46 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 
       @media (max-width: 700px) {
         text-align: center;
+        padding: 0px;
 
         .rate {
             position:relative;
             width: 120px;
             height : 25px;
-            left: 28%;
+            left: 30%;
      
+          }
+
+          .dot {
+            height: 150px;
+            width: 150px;
+            display: inline-block;
+            
+            
+
+          }
+          .side1 {
+            display: block;
+            padding: 0px 0px;
+            
+                 
+          }
+          side {
+            display: inline-block;
+            width: 100%;
+            margin-top: 5px;
+            color: black;
+            
+            
+                 
+          }
+          span.side {
+              width: 90%;
+              
+          }
+
+          span.side1 {
+            height: 150px;
           }
 
       }
@@ -150,8 +184,8 @@ const Crop = ({location}) => (
             allMarkdownRemark.edges.map(({node}) => (
                 
                 <Post key={node.frontmatter.slug}>
-                <div class="side1"><img class="dot" src={node.frontmatter.image} alt="article tumbnail" /></div>
-                <div class="side">
+                <span class="side1"><img class="dot" src={node.frontmatter.image} alt="article tumbnail" /></span>
+                <span class="side">
                     <Link to={`/posts${node.frontmatter.slug}`}>
                         <h1>{node.frontmatter.title}</h1>
                         
@@ -164,7 +198,7 @@ const Crop = ({location}) => (
                     <p>{node.excerpt} </p>
                     
                     <br></br>
-                    </div> 
+                    </span> 
                     <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>Read More</Link>
                 </Post>
                 

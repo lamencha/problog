@@ -39,8 +39,6 @@ const NavList = styled.ul`
   .container {
     position: relative;
     left: 0%;
-    
-    
     display: inline-block;
     padding: 10px;
   }
@@ -67,19 +65,23 @@ const NavList = styled.ul`
     border: 5px;
     border-style: dashed;
     
-    padding: 15px 32px;
+    padding: 10px 15px 0px;
     text-align: center;
     text-decoration: none;
     text-shadow: 3px 2px #ffb366;
     display: block;
          
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 2em;
     text-decoration: none;
     color: black;
     transition: font-size 3.2s;
     transition: padding 1s;
     transform: skewY(-1.0deg);
+  }
+
+  .middle:hover {
+    background-color: #61accc ;
   }
   
   .container:hover .image {
@@ -91,68 +93,53 @@ const NavList = styled.ul`
   }
   
   .text {
-    background-color: white;
+    
     color: black;
-    font-size: 0.8em;
-    padding: 16px 32px;
+    font-size: 25px;
+    padding: 5px 0px;
     text-decoration: none;
   }
 
 
   h2{
-    background-color: #000000;
-    color: white;
-    font-size: 0.8em;
-    padding: 16px 32px;
+ 
+    font-size: 25px;
+    
     text-decoration: none;
     transition: background-color 1s;
   }
   h2:visited {
-    background-color: #000000;
+    
     color: white;
-    font-size: 0.8em;
-    padding: 16px 32px;
+    font-size: 25px;
+    
     text-decoration: none;
   }
 
   h2:hover {
-    background-color: grey;
+    
     color: white;
-    font-size: 0.8em;
-    padding: 16px 32px;
+    font-size: 25px;
+    
     text-decoration: none;
   }
 
-  @media (max-width: 1872px) {
+  @media (max-width: 1278px) {
     .container {
-      position: relative;
-      left: 10%;
-      max-Width: 150px;
-      display: inline-block;
+      display: block;
       padding: 10px;
     }
 
   
 
   @media (max-width: 700px) {
-    .container {
-      position: relative;
-      padding: 10px;
-      max-Width: 150px;
-      display: inline-block;
-      
-    }
-
-  }
-  
-
-  @media (max-width: 420px) {
+ 
     .container {
       position: inherit;
-      padding: 0px;
+      padding: 5px;
       max-Width: 100%;
       display: block;
-      
+ 
     }
 
     .image{
@@ -161,18 +148,39 @@ const NavList = styled.ul`
 
     .middle {
       transition: .5s ease;
-      opacity: 0.7;
-      position: inherit;
       width: 100%;
-      padding: 0px;
-      top: 100%;
-      left: 100%;
-      transform: translate(0%, 0%);
-      -ms-transform: translate(0%, 0%);
-      text-align: center;
+      height: 60px;
+      padding: 5px 0px;
+
+
+    }
+    .text {
+      padding: 10px 0px;
+      color: black;
+      font-size: 15px;
+      
+      text-decoration: none;
     }
 
-
+    h2{
+      
+      font-size: 15px;
+      text-decoration: none;
+      transition: background-color 1s;
+    }
+    h2:visited {
+      
+      color: white;
+      font-size: 15px;
+      text-decoration: none;
+    }
+  
+    h2:hover {
+      
+      color: white;
+      font-size: 15px;
+      text-decoration: none;
+    }
 
     
   }
@@ -195,45 +203,50 @@ const Nav = () => (
          
        <div class="container">
         <div class="image1">
-      
+        <Link style={{textDecoration: `none`,}} to= {`/crop`}>
             <div  class="middle">
-              <Link style={{textDecoration: `none`,}} to= {`/crop`}>
+              
                 <h2 class="text">Cream Of The Crop</h2>
-              </Link>
+              
             </div>
+            </Link>
         </div>
       </div>
 
       <div class="container">
         <div class="image1">
-         
+        <Link  style={{textDecoration: `none`,}} to={`/about`}>
             <div  class="middle">
-              <Link  style={{textDecoration: `none`,}} to={`/about`}>
+              
                 <h2 class="text">About Us</h2>
-              </Link>
+              
             </div>
+            </Link>
         </div>
       </div>
       
       <div class="container">
         <div class="image1">
          
+        <Link style={{textDecoration: `none`,}} to= {`/luis`}>
             <div  class="middle">
-              <Link style={{textDecoration: `none`,}} to= {`/luis`}>
+             
                 <h2 class="text">Luis Menchaca</h2>
-              </Link>
+              
             </div>
+            </Link>
         </div>
       </div>
 
       <div class="container">
         <div class="image1">
-        
+        <Link  style={{textDecoration: `none`,}} to={`/bryan`}>
             <div  class="middle">
-              <Link  style={{textDecoration: `none`,}} to={`/bryan`}>
+              
                 <h2 class="text">Bryan Denetclaw</h2>
-              </Link>
+              
             </div>
+            </Link>
         </div>
       </div>
       </div>

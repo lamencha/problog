@@ -39,15 +39,17 @@ const MainLayout = styled.main`
     margin: 6px 0;
     width: 100%;
   }
-
+@media (min-width: 1287px) {
+  .small {
+    display: none;  
+   }
+}
 
   @media (max-width: 700px) {
     max-width: 100%;
     margin: 0rem auto;
     grid-template-columns: 1fr ;
-  }
 
-  @media (max-width: 420px) {
     button {
       font-family: "Arial Black", Gadget, sans-serif;
       display: block;
@@ -61,7 +63,8 @@ const MainLayout = styled.main`
       border: 5px;
       border-style: dashed;
       width: 100%;
-      padding: 15px 32px;
+      height: 50px;
+      padding: 0px 5px;
       text-align: center;
       text-decoration: none;
       text-shadow: 3px 2px #ffb366;
@@ -133,9 +136,11 @@ const Layout = ({ children, location }) => (
           <div>
           <div class="big">
            <Nav  />
-          </div>
+          </div >
           <Toggle>
+            <div class="small" >
           <Nav />
+          </div>
           </Toggle>
           {children}
           </div>
