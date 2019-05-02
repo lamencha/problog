@@ -19,6 +19,7 @@ const MainLayout = styled.main`
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 40px;
+  
 
   image {
     max-width: 20%;
@@ -39,6 +40,8 @@ const MainLayout = styled.main`
     margin: 6px 0;
     width: 100%;
   }
+
+
 @media (min-width: 1287px) {
   .small {
     display: none;  
@@ -77,7 +80,7 @@ const MainLayout = styled.main`
       color: black;
       transition: font-size 3.2s;
       transition: padding 1s;
-      transform: skewY(-1.0deg);
+      
     }
 
  .big {

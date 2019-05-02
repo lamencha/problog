@@ -175,6 +175,14 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
             height: 150px;
           }
 
+          .container {
+              scroll-snap-type: y mandatory;
+          }
+
+          .child {
+              scroll-snap-align: start;
+          }
+
       }
 
 
@@ -188,6 +196,8 @@ const Listing = () => (
                 
                 <Post key={node.frontmatter.slug}>
                 
+                <div class="container">
+                <div class="child">
                 <span class="side1"><img class="dot" src={node.frontmatter.image} alt="article tumbnail" /></span>
                 
                 <span class="side">
@@ -205,6 +215,8 @@ const Listing = () => (
                     <br></br>
                     </span> 
                     <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>Read More</Link>
+                    </div>
+                    </div>
                 </Post>
                 
             ))

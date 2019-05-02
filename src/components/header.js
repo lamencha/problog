@@ -31,7 +31,7 @@ const HeaderWrapper = styled.div`
   }
   
   .image {
-    background-color: white;
+    background-color: #556270;
     opacity: 1;
     display: block;
     width: 100%;
@@ -144,7 +144,7 @@ const Header = ({ siteTitle }) => (
 
      
     <HeaderContainer>
-    <h1 style={{ margin: 10 }}>
+    <h1 style={{ margin: 0 }}>
         <Link to="/">
           <img class="pic" src={zen2} alt="zen" />
         </Link>
