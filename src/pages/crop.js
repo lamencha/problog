@@ -80,7 +80,7 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
         color: black;
         transition: font-size 3.2s;
         transition: padding 1s;
-        transform: skewY(-1.0deg);
+        
        
     }
     .read-more:hover {
