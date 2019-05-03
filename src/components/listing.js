@@ -28,7 +28,7 @@ const LISTING_QUERY = graphql `
 `
 
 const Post = styled.article`
-background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+background: linear-gradient(-110deg, #757f9a, #4ecdc4);
 
     box-shadow: 0px 2px 10px rgba(25, 17, 34, 0.4);
     font-family: "Arial Black", Gadget, sans-serif;
@@ -36,7 +36,14 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     margin: 15px; 
     color: #f4f4f4;
     padding: 20px;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(3rem);
+    scroll-snap-type: y mandatory;
 
+    .container {  
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    }
          
     a {
         color: #f4f4f4;
@@ -81,7 +88,7 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
         color: black;
         transition: font-size 3.2s;
         transition: padding 1s;
-        transform: skewY(-1.0deg);
+        transform: skewX(-15deg);
        
     }
     .read-more:hover {
@@ -119,6 +126,7 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
       .side1 {
         display: inline-block;
         padding: 1.5rem;
+ 
              
       }
       h1 {
@@ -130,6 +138,12 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
           length: 30px;
           
       }
+
+
+      .child {
+
+      }
+      
 
       @media (max-width: 700px) {
         text-align: center;
@@ -175,13 +189,7 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
             height: 150px;
           }
 
-          .container {
-              scroll-snap-type: y mandatory;
-          }
 
-          .child {
-              scroll-snap-align: start;
-          }
 
       }
 
@@ -196,26 +204,22 @@ const Listing = () => (
                 
                 <Post key={node.frontmatter.slug}>
                 
-                <div class="container">
-                <div class="child">
-                <span class="side1"><img class="dot" src={node.frontmatter.image} alt="article tumbnail" /></span>
-                
-                <span class="side">
-                    <Link to={`/posts${node.frontmatter.slug}`}>
-                        <h1>{node.frontmatter.title}</h1>
+                    <div class="container" >
+                        <span class="side1"><img class="dot" src={node.frontmatter.image} alt="article tumbnail" /></span>
                         
-                    </Link>
-                    <p> <img class="cal" src={cal} alt="calendar" /> {node.frontmatter.date} </p>
-                    <img class="rate" src={node.frontmatter.rate} alt="Rating" />
-                                                            
-                    
-                                                           
-                    <p>{node.excerpt} </p>
-                    
-                    <br></br>
-                    </span> 
-                    <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>Read More</Link>
-                    </div>
+                            <span class="side">
+                                <Link to={`/posts${node.frontmatter.slug}`}>
+                                    <h1>{node.frontmatter.title}</h1>
+                                    
+                                </Link>
+                                    <p> <img class="cal" src={cal} alt="calendar" /> {node.frontmatter.date} </p>
+                                        <img class="rate" src={node.frontmatter.rate} alt="Rating" />
+                                                                                                            
+                                            <p>{node.excerpt} </p>
+                                
+                                                <br></br>
+                        </span> 
+                            <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>Read More</Link>
                     </div>
                 </Post>
                 

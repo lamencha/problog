@@ -41,6 +41,27 @@ const MainLayout = styled.main`
     width: 100%;
   }
 
+  footer {
+    position: static;
+
+    width: 100%;
+    margin-bottom: -50px;
+    
+    list-style: none;
+    border-radius: 15px 15px;
+    background-image: linear-gradient(-141deg, #757f9a 41%, #4ecdc4 80%);
+    box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.2);
+    padding: 1rem;
+    border-radius: 4px
+    text-decoration: none;
+    color: #f4f4f4;
+    text-align: center;
+    text-shadow: 3px 2px #ffb366;
+    font-family: "Arial Black", Gadget, sans-serif;
+  }
+
+
+
 
 @media (min-width: 1287px) {
   .small {
@@ -52,6 +73,7 @@ const MainLayout = styled.main`
     max-width: 100%;
     margin: 0rem auto;
     grid-template-columns: 1fr ;
+    font-family: "Arial Black", Gadget, sans-serif;
 
     button {
       font-family: "Arial Black", Gadget, sans-serif;
@@ -114,6 +136,8 @@ const Layout = ({ children, location }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <title>AZ Zenheads</title>
+        <meta name="Description" content="A simple blog about anything"></meta>
         <br></br>
         <Spring
           from={{ height: location.pathname === '/' ? 200 : 300 }}
@@ -153,6 +177,7 @@ const Layout = ({ children, location }) => (
             © {new Date().getFullYear()}
             {` `}
             <a href="https://twitch.tv/mnstrpenguin">MnstrPenguin</a>
+            <br></br>
           </footer>
         </MainLayout>
       </>

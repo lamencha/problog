@@ -27,7 +27,7 @@ query CropPostListing {
 `
 
 const Post = styled.article`
-background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 31%, #2cb5e8 75%);
 
     box-shadow: 0px 2px 10px rgba(25, 17, 34, 0.4);
     font-family: "Arial Black", Gadget, sans-serif;

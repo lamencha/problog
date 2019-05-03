@@ -27,14 +27,14 @@ const NavList = styled.ul`
   padding: 0;
   margin: 15px;
   list-style: none;
-  border-radius: 15px 50px;
-  background-image: linear-gradient(141deg, #9fb8ad 51%, #1fc8db 20%);
+  border-radius: 15px 15px;
+  background-image: linear-gradient(-141deg, #757f9a 41%, #4ecdc4 80%);
   box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.2);
   padding: 1rem;
   border-radius: 4px
   text-decoration: none;
   color: #f4f4f4;
-
+  text-align: center;
 
   .container {
     position: relative;
@@ -77,7 +77,7 @@ const NavList = styled.ul`
     color: black;
     transition: font-size 3.2s;
     transition: padding 1s;
-    transform: skewY(-1.0deg);
+    transform: skewX(-18deg);
   }
 
   .middle:hover {
@@ -195,10 +195,7 @@ const Nav = () => (
       <>
        <aside>
        <NavList>
-
-      
-        
-      
+  
 <div>
          
        <div class="container">

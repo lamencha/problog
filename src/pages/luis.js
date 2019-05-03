@@ -1,9 +1,26 @@
 import React from 'react';
-
+import styled from 'styled-components'
 import Layout from '../components/layout'
 
+const LuisMain = styled.article`
+background-color: #697b8e;
+max-width: 90%;
+margin: 1rem auto;
+display: grid;
+grid-template-columns: 3fr 1fr;
+grid-gap: 40px;
+color: white;
+font-family: "Arial Black", Gadget, sans-serif;
+box-shadow: 0px 2px 10px rgba(25, 17, 34, 0.4);
+border-radius: 4px;
+padding: 20px;
+
+
+
+`
 const Luis = ({location}) => (
     <Layout location={location} >
+    <LuisMain>
     <div>
         <h1>About Luis</h1>
         <p>
@@ -15,6 +32,7 @@ const Luis = ({location}) => (
         I bet you’re still using Bootstrap too…  
         </p>
     </div>
+    </LuisMain>
     </Layout>
 )
 

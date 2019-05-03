@@ -13,12 +13,13 @@ const HeaderWrapper = styled.div`
       max-Width: 408.8px;
       max-Height: 272.53px;
     margin-bottom: 0;
-    -webkit-filter: grayscale(100%);filter: grayscale(100%);
+    -webkit-filter: grayscale(0%);filter: grayscale(0%);
     transition: -webkit-filter 1s;
   }
 
   .pic:hover {
-    -webkit-filter: grayscale(0%);filter: grayscale(0%);
+    
+    -webkit-filter: grayscale(100%);filter: grayscale(100%);
   }
 
   .container {
@@ -68,6 +69,8 @@ const HeaderWrapper = styled.div`
   }
 
 
+
+
   h2{
     background-color: #4CAF50;
     color: white;
@@ -90,9 +93,22 @@ const HeaderWrapper = styled.div`
     padding: 16px 32px;
     text-decoration: none;
   }
+
+  p{
+    position: absolute;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    
+    width: 100%;
+    margin-top: 100px;
+    text-shadow: 2px 2px #ffb366;
+
+  }
+
   .left {
     background-image: linear-gradient(141deg, #556270 50%, #1fc8db 20%, #4ecdc4 40%);
-    transform: skewY(-1.8deg);
+    
     height: 50px;
     width: 100%;
     z-index: auto;
@@ -101,7 +117,7 @@ const HeaderWrapper = styled.div`
 
   .right {
     background-image: linear-gradient(141deg, #556270 50%, #1fc8db 20%, #4ecdc4 40%);
-    transform: skewY(2.2deg);
+    
     height: 50px;
     width: 100%;
     z-index: auto;
@@ -119,6 +135,9 @@ const HeaderWrapper = styled.div`
   }
   .right {
     height: 15px;
+  }
+  p {
+    margin-top: 50px
   }
 }
 @media (max-width: 360px) {
@@ -145,10 +164,14 @@ const Header = ({ siteTitle }) => (
      
     <HeaderContainer>
     <h1 style={{ margin: 0 }}>
+    <p>A Blog</p>
         <Link to="/">
           <img class="pic" src={zen2} alt="zen" />
+          
         </Link>
+        
       </h1>
+      
     <div class="left" > 
     <div class="right" >
     </div>
