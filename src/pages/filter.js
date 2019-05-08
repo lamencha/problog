@@ -26,6 +26,8 @@ const Filter_ARCHIVE_QUERY = graphql`
 const FilterList = styled.ul`
 
   text-align: center;
+  margin-left: 0px;
+
 
   img.fil{
     display: inline-block;
@@ -116,7 +118,7 @@ const Filter = () => (
        <aside>
         <FilterList>
     
-          <div>
+          
             <Link style={{textDecoration: `none`,}} to= {`/breakfast`}>
               <h2 class="text"><img class="fil" src={fil} alt="calendar" />Breakfast</h2>
             </Link>
@@ -128,7 +130,7 @@ const Filter = () => (
             <Link style={{textDecoration: `none`,}} to= {`/dinner`}>
               <h2 class="text"><img class="fil" src={fil} alt="calendar" />Dinner</h2>
             </Link>
-          </div>
+          
         
         </FilterList>
       </aside>
