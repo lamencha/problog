@@ -5,6 +5,7 @@ title: The First
 image: /img/luipen1p.png
 crop: 1
 rate: /img/star5p.png
+meal: lunch
 ---
 # Whats up
 

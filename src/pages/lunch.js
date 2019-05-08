@@ -1,50 +1,49 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link, StaticQuery, graphql } from 'gatsby'
+
+import Layout from '../components/layout'
 import cal from '../images/cal2.png'
+import Filter from './filter'
 
 
 const LISTING_QUERY = graphql `
-    query BlogPostListing {
-        allMarkdownRemark(limit: 10, sort: {
-        order: DESC,
-        fields: [frontmatter___date]
-        }) {
-        edges {
-            node{
-                excerpt(pruneLength: 280)
-                frontmatter {
-                    date(formatString: "MMMM DD, YYYY")
-                    title
-                    slug
-                    image
-                    crop
-                    rate
-                }
-            }        
-        }
-        }
+query lunchPostListing {
+    allMarkdownRemark(filter: { frontmatter: { crop: {eq: 1 }, meal: {eq: "lunch" } } } ) {
+    edges {
+        node{
+            excerpt
+            frontmatter {
+                date(formatString: "MMMM DD, YYYY")
+                title
+                slug
+                image
+                crop
+                meal
+                rate
+            }
+        }        
     }
+    }
+}
 `
 
 const Post = styled.article`
-background: linear-gradient(-110deg, #757f9a, #4ecdc4);
+background: #91ABE3;
+background: -webkit-radial-gradient(top right, #91ABE3, #97B6A5);
+background: -moz-radial-gradient(top right, #91ABE3, #97B6A5);
+background: radial-gradient(top right, #91ABE3, #97B6A5);
 
     box-shadow: 0px 2px 10px rgba(25, 17, 34, 0.4);
     font-family: "Arial Black", Gadget, sans-serif;
     border-radius: 4px;
     margin: 15px; 
     color: #f4f4f4;
-    padding: 20px;
-    scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(3rem);
-    scroll-snap-type: y mandatory;
+   
 
-    .container {  
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    }
-         
+     img.fil {
+         color: blue;
+     }    
     a {
         color: #f4f4f4;
         text-decoration: none;
@@ -55,7 +54,7 @@ background: linear-gradient(-110deg, #757f9a, #4ecdc4);
     a:hover  {
         text-shadow: 2px 2px 4px #7f7f7f;
         margin-top: 0px;
-        color: #afd9ea;
+        color: black;
 
     }
 
@@ -100,9 +99,7 @@ background: linear-gradient(-110deg, #757f9a, #4ecdc4);
     .dot {
         height: 250px;
         width: 250px;
-        display: inline-block;
-        
-
+        display: flex;
         
       }
 
@@ -126,7 +123,6 @@ background: linear-gradient(-110deg, #757f9a, #4ecdc4);
       .side1 {
         display: inline-block;
         padding: 1.5rem;
- 
              
       }
       h1 {
@@ -136,14 +132,7 @@ background: linear-gradient(-110deg, #757f9a, #4ecdc4);
       .cal{
           width: 30px;
           length: 30px;
-          
       }
-
-
-      .child {
-
-      }
-      
 
       @media (max-width: 700px) {
         text-align: center;
@@ -153,20 +142,20 @@ background: linear-gradient(-110deg, #757f9a, #4ecdc4);
             position:relative;
             width: 120px;
             height : 25px;
-            left: 35%;
+            left: 30%;
      
           }
 
           .dot {
-            height: 320px;
-            width: 100%;
-            display: felx;
+            height: 150px;
+            width: 150px;
+            display: inline-block;
             
             
 
           }
           .side1 {
-            display: inline-block;
+            display: block;
             padding: 0px 0px;
             
                  
@@ -189,38 +178,35 @@ background: linear-gradient(-110deg, #757f9a, #4ecdc4);
             height: 150px;
           }
 
-
-
       }
 
 
 `
-
-const Listing = () => (
+const Crop = ({location}) => (
+    <Layout location={location} >
+        <Filter  />
     <StaticQuery
         query={LISTING_QUERY}
         render={({allMarkdownRemark}) => (
             allMarkdownRemark.edges.map(({node}) => (
                 
                 <Post key={node.frontmatter.slug}>
-                
-                    <div class="container" >
-                        <span class="side1"><img class="dot" src={node.frontmatter.image} alt="article tumbnail" /></span>
+                <span class="side1"><img class="dot" src={node.frontmatter.image} alt="article tumbnail" /></span>
+                <span class="side">
+                    <Link to={`/posts${node.frontmatter.slug}`}>
+                        <h1>{node.frontmatter.title}</h1>
                         
-                            <span class="side">
-                                <Link to={`/posts${node.frontmatter.slug}`}>
-                                    <h1>{node.frontmatter.title}</h1>
-                                    
-                                </Link>
-                                    <p> <img class="cal" src={cal} alt="calendar" /> {node.frontmatter.date} </p>
-                                        <img class="rate" src={node.frontmatter.rate} alt="Rating" />
-                                                                                                            
-                                            <p>{node.excerpt} </p>
-                                
-                                                <br></br>
-                        </span> 
-                            <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>Read More</Link>
-                    </div>
+                    </Link>
+                    <p> <img class="cal" src={cal} alt="calendar" /> {node.frontmatter.date} </p>
+                    <img class="rate" src={node.frontmatter.rate} alt="Rating" />
+                                                            
+                    
+                                                           
+                    <p>{node.excerpt} </p>
+                    
+                    <br></br>
+                    </span> 
+                    <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>Read More</Link>
                 </Post>
                 
             ))
@@ -228,7 +214,9 @@ const Listing = () => (
         )}
         
     />
+
+</Layout>
     
 )
 
-export default Listing
+export default Crop

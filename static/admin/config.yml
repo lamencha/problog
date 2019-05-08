@@ -19,4 +19,5 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { name: crop, label: Cream of the Crop 1 to add 0 to omit, widget: number, valueType: int}
+      - { label: 'Meal', name: 'meal' }
       - { label: 'Rate', name: 'rate', widget: 'image' }

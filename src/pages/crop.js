@@ -4,6 +4,7 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import cal from '../images/cal2.png'
+import Filter from './filter'
 
 
 const LISTING_QUERY = graphql `
@@ -27,14 +28,17 @@ query CropPostListing {
 `
 
 const Post = styled.article`
-background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 31%, #2cb5e8 75%);
+background: #2CB5E8;
+background: -webkit-radial-gradient(top right, #2CB5E8, #97B6A5);
+background: -moz-radial-gradient(top right, #2CB5E8, #97B6A5);
+background: radial-gradient(top right, #2CB5E8, #97B6A5);
 
     box-shadow: 0px 2px 10px rgba(25, 17, 34, 0.4);
     font-family: "Arial Black", Gadget, sans-serif;
     border-radius: 4px;
     margin: 15px; 
     color: #f4f4f4;
-    padding: 20px;
+    
 
          
     a {
@@ -127,6 +131,7 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 31%, #2cb5e8 75%);
           length: 30px;
       }
 
+
       @media (max-width: 700px) {
         text-align: center;
         padding: 0px;
@@ -177,13 +182,14 @@ background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 31%, #2cb5e8 75%);
 `
 const Crop = ({location}) => (
     <Layout location={location} >
-
+    <Filter  />
     <StaticQuery
         query={LISTING_QUERY}
         render={({allMarkdownRemark}) => (
             allMarkdownRemark.edges.map(({node}) => (
                 
                 <Post key={node.frontmatter.slug}>
+                
                 <span class="side1"><img class="dot" src={node.frontmatter.image} alt="article tumbnail" /></span>
                 <span class="side">
                     <Link to={`/posts${node.frontmatter.slug}`}>
@@ -199,7 +205,9 @@ const Crop = ({location}) => (
                     
                     <br></br>
                     </span> 
+                    
                     <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>Read More</Link>
+                    
                 </Post>
                 
             ))

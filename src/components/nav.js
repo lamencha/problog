@@ -35,6 +35,7 @@ const NavList = styled.ul`
   text-decoration: none;
   color: #f4f4f4;
   text-align: center;
+  
 
   .container {
     position: relative;

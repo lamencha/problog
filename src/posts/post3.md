@@ -5,6 +5,7 @@ title: The Third
 image: /img/corn1p.png
 crop: 0
 rate: /img/star3p.png
+meal: dinner
 ---
 # Hello
 
