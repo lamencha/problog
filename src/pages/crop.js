@@ -51,7 +51,7 @@ background: radial-gradient(top right, #2CB5E8, #97B6A5);
     a:hover  {
         text-shadow: 2px 2px 4px #7f7f7f;
         margin-top: 0px;
-        color: black;
+        color: #000;
 
     }
 
@@ -81,7 +81,7 @@ background: radial-gradient(top right, #2CB5E8, #97B6A5);
         cursor: pointer;
         font-size: 1rem;
         text-decoration: none;
-        color: black;
+        color: #000;
         transition: font-size 3.2s;
         transition: padding 1s;
         
@@ -162,7 +162,7 @@ background: radial-gradient(top right, #2CB5E8, #97B6A5);
             display: inline-block;
             width: 100%;
             margin-top: 5px;
-            color: black;
+            color: #000;
             
             
                  

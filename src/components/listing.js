@@ -35,7 +35,7 @@ background: linear-gradient(-110deg, #757f9a, #4ecdc4);
     border-radius: 4px;
     margin: 15px; 
     color: #f4f4f4;
-    padding: 20px;
+    
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(3rem);
     scroll-snap-type: y mandatory;
@@ -85,7 +85,7 @@ background: linear-gradient(-110deg, #757f9a, #4ecdc4);
         cursor: pointer;
         font-size: 1rem;
         text-decoration: none;
-        color: black;
+        color: #000;
         transition: font-size 3.2s;
         transition: padding 1s;
         
@@ -175,7 +175,7 @@ background: linear-gradient(-110deg, #757f9a, #4ecdc4);
             display: inline-block;
             width: 100%;
             margin-top: 5px;
-            color: black;
+            color: #000;
             
             
                  

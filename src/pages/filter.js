@@ -41,7 +41,7 @@ const FilterList = styled.ul`
 
   h2{
     font-size: 25px;
-    color: black;
+    color: #000;
     display: inline-block;
     text-transform: uppercase;
     font-weight: 800;
@@ -61,13 +61,13 @@ const FilterList = styled.ul`
   
   }
   h2:visited { 
-    color: white;
+    color: #fff;
     font-size: 25px;
     text-decoration: none;
   }
 
   h2:hover {
-    color: white;
+    color: #fff;
     font-size: 25px;
     text-decoration: none;
   }

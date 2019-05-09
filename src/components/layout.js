@@ -36,17 +36,17 @@ const MainLayout = styled.main`
   .ham {
     
     height: 5px;
-    background-color: black;
+    background-color: #000;
     margin: 6px 0;
     width: 100%;
   }
 
   footer {
     position: static;
-
+    
     width: 100%;
     margin-bottom: -50px;
-    
+    height: 500px;
     list-style: none;
     border-radius: 15px 15px;
     background-image: linear-gradient(-141deg, #757f9a 41%, #4ecdc4 80%);
@@ -99,7 +99,7 @@ const MainLayout = styled.main`
       cursor: pointer;
       font-size: 1rem;
       text-decoration: none;
-      color: black;
+      color: #000;
       transition: font-size 3.2s;
       transition: padding 1s;
       

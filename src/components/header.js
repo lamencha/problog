@@ -62,7 +62,7 @@ const HeaderWrapper = styled.div`
   
   .text {
     background-color: #4CAF50;
-    color: white;
+    color: #fff;
     font-size: 16px;
     padding: 16px 32px;
     text-decoration: none;
@@ -73,14 +73,14 @@ const HeaderWrapper = styled.div`
 
   h2{
     background-color: #4CAF50;
-    color: white;
+    color: #fff;
     font-size: 16px;
     padding: 16px 32px;
     text-decoration: none;
   }
   h2:visited {
     background-color: #4CAF50;
-    color: white;
+    color: #fff;
     font-size: 16px;
     padding: 16px 32px;
     text-decoration: none;
@@ -88,7 +88,7 @@ const HeaderWrapper = styled.div`
 
   h2:hover {
     background-color: #4CAF50;
-    color: white;
+    color: #fff;
     font-size: 16px;
     padding: 16px 32px;
     text-decoration: none;
@@ -97,7 +97,7 @@ const HeaderWrapper = styled.div`
   p{
     position: absolute;
     display: inline-block;
-    color: white;
+    color: #fff;
     text-align: center;
     
     width: 100%;

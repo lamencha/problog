@@ -45,7 +45,7 @@ const NavList = styled.ul`
   }
   
   .image {
-    background-color: white;
+    background-color: #fff;
     opacity: 1;
     display: block;
     width: 100%;
@@ -111,7 +111,7 @@ const NavList = styled.ul`
   }
   h2:visited {
     
-    color: white;
+    color: #fff;
     font-size: 25px;
     
     text-decoration: none;
@@ -119,7 +119,7 @@ const NavList = styled.ul`
 
   h2:hover {
     
-    color: white;
+    color: #fff;
     font-size: 25px;
     
     text-decoration: none;
@@ -171,14 +171,14 @@ const NavList = styled.ul`
     }
     h2:visited {
       
-      color: white;
+      color: #fff;
       font-size: 15px;
       text-decoration: none;
     }
   
     h2:hover {
       
-      color: white;
+      color: #fff;
       font-size: 15px;
       text-decoration: none;
     }
